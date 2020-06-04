@@ -19,4 +19,11 @@ def read_table()
   hash
 end
 
+def add_to_file()
+  fileHtml = File.new("test.html", "w+")
+  fileHtml.puts "<html><body><h1>My First Heading</h1><p>My first paragraph.</p></body></html>"
+  fileHtml.close()
+end
+
 read_table()
+add_to_file()
