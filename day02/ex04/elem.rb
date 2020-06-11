@@ -54,7 +54,7 @@ class Elem
     return html_string
   end
 
-  def  add_img(html_string=nil)
+  def add_img(html_string=nil)
     inline_css = ''
     return "<img #{inline_css}/>" if html_string == nil
     if @opt != nil

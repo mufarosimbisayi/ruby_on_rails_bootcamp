@@ -8,19 +8,7 @@ class Elem
     @content = content || []
   end
 
-  def check_current_content
-
-    unless @content.class == Array
-      tmp = @content || nil
-      @content = []
-      @content[0] = tmp if tmp
-    end
-
-  end
-
   def add_content(*new_content)
-    #check_current_content
-
     if new_content.class != Array
       @content.push(new_content)
     elsif new_content.class == Array
@@ -28,7 +16,6 @@ class Elem
         @content.push(content_elem)
       end
     end
-
   end
 
   def add_html
